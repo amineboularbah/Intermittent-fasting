@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        android:background="#979DFF">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/hiscardback">
+
+        <ImageView
+                android:id="@+id/feelimg"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:padding="5dp"/>
+
+        <TextView
+                android:id="@+id/fastcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/feelimg"
+                android:text="Fast"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="6dp"/>
+
+        <TextView
+                android:id="@+id/commenttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fastcat"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/feelimg"
+                android:text="Comment"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:padding="6dp"/>
+
+        <TextView
+                android:id="@+id/datetxt"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="4dp"
+                android:text="TextView"
+                android:textColor="#FFF"
+                android:padding="5dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

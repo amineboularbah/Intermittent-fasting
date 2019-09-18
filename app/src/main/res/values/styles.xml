@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#020F59</item>
+        <item name="colorPrimaryDark">#000A5F</item>
+        <item name="colorAccent">#020F59</item>
+    </style>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <style name="pickerTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:dialogCornerRadius" tools:targetApi="p">10dp</item>
+        <item name="android:fontFamily">@font/acme</item>
+
+    </style>
+
+</resources>

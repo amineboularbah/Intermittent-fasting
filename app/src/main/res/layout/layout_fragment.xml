@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="left"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/weight"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:text="Weight"
+                android:textColor="#020F59"
+                android:textSize="18sp"
+                android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+                android:id="@+id/kilos"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:inputType="numberDecimal"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KG"
+                android:textSize="18dp"
+                android:textColor="#020F59"
+                android:fontFamily="@font/acme"
+                android:layout_gravity="center"/>
+        <TextView
+        android:id="@+id/gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / "
+        android:textSize="24dp"
+        android:textColor="#020F59"
+        android:fontFamily="@font/acme"
+        android:layout_gravity="center"
+                android:textStyle=""/>
+
+        <TextView
+                android:id="@+id/pounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LB"
+                android:textSize="18dp"
+                android:textColor="#020F59"
+                android:fontFamily="@font/acme"
+                android:layout_gravity="center"/>
+    </TableRow>
+
+    <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow2"
+            android:gravity="left">
+        <ImageView
+                android:id="@+id/img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_date_range"
+                />
+
+        <TextView
+                android:id="@+id/dtxt"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="18dp"
+                android:textColor="#020F59"
+                android:fontFamily="@font/acme"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+        <TextView
+                android:id="@+id/datetx"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:layout_gravity="center"
+                />
+    </TableRow>
+
+
+    <TextView
+            android:id="@+id/weightsave"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#020F59"
+            android:text="Adding Weight . . ."
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:fontFamily="@font/acme"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

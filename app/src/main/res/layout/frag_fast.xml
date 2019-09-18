@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#CBD3FD"
+        android:layout_height="match_parent">
+
+    <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="46dp"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbarSize="0dp"
+                android:scrollbars="none"
+                android:padding="20dp"
+                android:verticalScrollbarPosition="defaultPosition">
+
+            <TextView
+                    android:id="@+id/twelvehours"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/buttonback"
+                    android:fontFamily="@font/acme"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Fast for 12 hours \n 12/12"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"/>
+
+            <TextView
+                    android:id="@+id/sixteenhours"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonback"
+                    android:fontFamily="@font/acme"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Fast for 16 hours \n 16/8"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/twentyhours"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonback"
+                    android:fontFamily="@font/acme"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Fast for 20 hours \n 20/4"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/twentyfourhours"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonback"
+                    android:fontFamily="@font/acme"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Fast for 24 hours \n 24/0"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/selecthours"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonback"
+                    android:fontFamily="@font/acme"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Select how many \nhours to fast"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/buttonback"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"/>
+
+    <TableRow
+            android:layout_width="320dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+                android:id="@+id/DateView"
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:text="What fasting category would you like to try ?\n \n Select the suitable category for you and read more info about it."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_restaurant_menu_black_24dp" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
