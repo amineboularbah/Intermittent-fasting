@@ -38,4 +38,6 @@ dependencies {
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.material:material:1.0.0'
 }

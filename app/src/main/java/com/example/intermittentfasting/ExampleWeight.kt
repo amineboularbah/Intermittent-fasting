@@ -10,7 +10,7 @@ class ExampleWeight(mWeight:String, mWDate:String) {
     }
 
     fun getText1(): String {
-        return mText1
+        return "Your weight is:\n $mText1 "
     }
 
     fun getText2(): String {

@@ -8,16 +8,15 @@
         tools:context=".SSaveFast">
 
     <View
-            android:id="@+id/view3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/buttonback"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
             android:id="@+id/vFastCategory"
@@ -35,168 +34,173 @@
             app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="How do you feel ?"
-            app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/vFastCategory"
-            android:textColor="#FFF"
-            android:fontFamily="@font/acme"
-            android:textSize="16dp"
-            android:gravity="center"/>
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="How do you feel ?"
+        android:textColor="#FFF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/vFastCategory" />
 
     <TableRow
-            android:id="@+id/tableRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3">
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <ImageView
-                android:id="@+id/angryimg"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/angry" />
-
-        <View
-                android:id="@+id/view4"
-                android:layout_width="20dp"
-                android:layout_height="50dp" />
+            android:id="@+id/angryimg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/angry" />
 
         <ImageView
-                android:id="@+id/badimg"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/sad" />
-
-        <View
-                android:id="@+id/view5"
-                android:layout_width="20dp"
-                android:layout_height="50dp" />
+            android:id="@+id/badimg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/sad" />
 
         <ImageView
-                android:id="@+id/goodimg"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/good" />
+            android:id="@+id/goodimg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/good" />
 
     </TableRow>
 
     <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:fontFamily="@font/acme"
-            android:gravity="center"
-            android:text="Do you want to add any comment ?"
-            android:textColor="#FFF"
-            android:textSize="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="Do you want to add any comment ?"
+        android:textColor="#FFF"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow5" />
 
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+    <EditText
+            android:id="@+id/comtxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:textColorHint="#B5FFFFFF"
+            android:hint="Comment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/textView4">
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:gravity="center"
+            android:fontFamily="@font/acme"
+            android:backgroundTint="#FFF"
+            android:maxLength="150"
+            android:textColor="#FFF"
+            android:inputType="textMultiLine"
+            android:maxLines="4">
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/comtxt"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:background="#25FFFFFF"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:hint="Comment"
-                android:maxLength="100"
-                android:textColor="#FFF"
-                android:textSize="14dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
-    <Button
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+
+        <TextView
+            android:id="@+id/angrytxt"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acme"
+            android:text="ANGRY"
+            android:textColor="#FFF"
+            android:textSize="22dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/badtxt"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/acme"
+            android:text="BAD"
+            android:textColor="#FFF"
+            android:textSize="22dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/goodtxt"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acme"
+            android:gravity="center"
+            android:text="GOOD"
+            android:textColor="#FFF"
+            android:textSize="22dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/comtxt"
+        app:layout_constraintVertical_bias="0.406">
+
+
+        <Button
             android:id="@+id/discardbtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:background="@drawable/opobuttonsback"
-            android:text="Discard"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-            app:layout_constraintVertical_bias="0.232"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/selected"
             android:fontFamily="@font/acme"
-            android:textSize="18dp"/>
+            android:gravity="center"
+            android:text="DISCARD"
+            android:textSize="18dp"
+            android:textColor="#FFF"/>
 
-    <Button
+        <Button
             android:id="@+id/savebtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:background="@drawable/opobuttonsback"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/selected"
+            android:fontFamily="@font/acme"
+            android:gravity="center"
             android:text="Save"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintHorizontal_bias="0.642"
-            app:layout_constraintStart_toEndOf="@+id/discardbtn"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-            app:layout_constraintVertical_bias="0.232"
-            android:fontFamily="@font/acme"
-            android:textSize="18dp"/>
-
-    <TextView
-            android:id="@+id/angrytxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:fontFamily="@font/acme"
-            android:text="Angry"
-            android:textAlignment="center"
-            android:textColor="#FFF"
             android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+            android:textColor="#FFF"/>
+    </TableRow>
 
-    <TextView
-            android:id="@+id/badtxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:fontFamily="@font/acme"
-            android:text="Bad"
-            android:textAlignment="center"
-            android:textColor="#FFF"
-            android:textSize="18dp"
-            app:layout_constraintStart_toEndOf="@+id/angrytxt"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
 
-    <TextView
-            android:id="@+id/goodtxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
-            android:fontFamily="@font/acme"
-            android:text="Good"
-            android:textAlignment="center"
-            android:textColor="#FFF"
-            android:textSize="18dp"
-            app:layout_constraintStart_toEndOf="@+id/badtxt"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

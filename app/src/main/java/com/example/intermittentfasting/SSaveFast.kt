@@ -17,6 +17,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
+import android.app.NotificationManager
+
 
 class SSaveFast : AppCompatActivity() {
     private var fastlist:ArrayList<FastEx> = ArrayList()
@@ -25,7 +27,7 @@ class SSaveFast : AppCompatActivity() {
     private var img:Int ?= null
     private lateinit var mInterstitialAd: InterstitialAd
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ssave_fast)
@@ -43,34 +45,33 @@ class SSaveFast : AppCompatActivity() {
         vFastCategory.text="Fast category :\n $timeLeft Hours"
         //Buttons click event.
         badimg.setOnClickListener{
-            badtxt.textSize = 24F
-            angrytxt.textSize = 18F
-            goodtxt.textSize = 18F
+            badtxt.setBackgroundResource(R.drawable.selected)
+            goodtxt.setBackgroundColor(0)
+            angrytxt.setBackgroundColor(0)
             img = R.drawable.sad
         }
         angryimg.setOnClickListener{
-            badtxt.textSize = 18F
-            angrytxt.textSize = 24F
-            goodtxt.textSize = 18F
+            angrytxt.setBackgroundResource(R.drawable.selected)
+            goodtxt.setBackgroundColor(0)
+            badtxt.setBackgroundColor(0)
             img = R.drawable.angry
         }
         goodimg.setOnClickListener{
-            badtxt.textSize = 18F
-            angrytxt.textSize = 18F
-            goodtxt.textSize = 24F
+            goodtxt.setBackgroundResource(R.drawable.selected)
+            angrytxt.setBackgroundColor(0)
+            badtxt.setBackgroundColor(0)
             img = R.drawable.good
         }
         savebtn.setOnClickListener{
-            if(comtxt.text!!.isEmpty()){
-                comment = "No comment"
+            comment = if(comtxt.text!!.isEmpty()){
+                "No comment"
             }else {
-                comment = comtxt.text.toString()
-
+                comtxt.text.toString()
             }
             if(img == null){
                 Toast.makeText(this,"How do you feel ??",Toast.LENGTH_SHORT).show()
             }else{
-                val date = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date())
+                val date = SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(Date())
                 fastlist.add(FastEx(img!!, timeLeft+"Hours", comment,date))
                 saveData()
                 val intent = Intent(this, MainActivity::class.java)
@@ -80,6 +81,8 @@ class SSaveFast : AppCompatActivity() {
                     mInterstitialAd.show()
                 }
             }
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.cancelAll()
         }
         discardbtn.setOnClickListener {
             val confirming = AlertDialog.Builder(this)
@@ -97,7 +100,8 @@ class SSaveFast : AppCompatActivity() {
             }
             val dialog = confirming.create()
             dialog.show()
-
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.cancelAll()
         }
     }
     private fun saveData() {

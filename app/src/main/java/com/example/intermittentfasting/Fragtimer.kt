@@ -19,10 +19,15 @@ import java.util.concurrent.TimeUnit
 import android.content.Context.MODE_PRIVATE
 import android.text.format.DateFormat
 import android.content.Intent
+import android.view.animation.AnimationUtils
+import android.widget.Button
 import androidx.core.content.ContextCompat
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import me.zhanghai.android.materialprogressbar.MaterialProgressBar
 
 @Suppress("UNREACHABLE_CODE", "RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS", "NAME_SHADOWING")
 @SuppressLint("SetTextI18n")
+
 class  Fragtimer : Fragment() {
     //Variables declaration
     private var viewModel: SharedViewModel? = null
@@ -42,30 +47,30 @@ class  Fragtimer : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.frag_timer,container,false)
     }
-
+    @SuppressLint("RestrictedApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        seebtn.setOnClickListener{
+            val fragreplace : FragmentTransaction = fragmentManager!!.beginTransaction()
+            fragreplace.replace(R.id.frag, Fragfast()).commit()
+            val botnav: BottomNavigationView = activity!!.findViewById(R.id.bott_nav)
+            botnav.selectedItemId= R.id.nav_fast
+        }
         nowbtn.setOnClickListener{
             whenbtn.visibility=View.INVISIBLE
             nowbtn.visibility=View.INVISIBLE
-            Cancelbtn.visibility=View.VISIBLE
+            smalltobig(Cancelbtn)
             if(startTimeInMillis != 0L){
                 timeLeftInMillis=startTimeInMillis
                 startTimer()
-            }else {
-                val fragreplace : FragmentTransaction = fragmentManager!!.beginTransaction()
-                fragreplace.replace(R.id.frag, Fragfast()).commit()
-                val botnav: BottomNavigationView = activity!!.findViewById(R.id.bott_nav)
-                botnav.selectedItemId= R.id.nav_fast
-                Toast.makeText( context,"You are not fasting !!\n Check fasts list and select a fasting category !", Toast.LENGTH_SHORT).show()
             }
         }
         whenbtn.setOnClickListener{
             if(startTimeInMillis !=0L){
                 val c = Calendar.getInstance()
                 val timeSetListener = TimePickerDialog.OnTimeSetListener{ _, hour, minute ->
-                    whenbtn.visibility = View.INVISIBLE
-                    Cancelbtn.visibility=View.VISIBLE
+                    whenbtn.visibility=View.INVISIBLE
+                    smalltobig(Cancelbtn)
                     timeselected=true
                     c.set(Calendar.HOUR_OF_DAY,hour)
                     c.set(Calendar.MINUTE,minute)
@@ -80,20 +85,13 @@ class  Fragtimer : Fragment() {
                     timelefttofast()
                 }
                 TimePickerDialog(this.activity,timeSetListener,c.get(Calendar.HOUR_OF_DAY),c.get(Calendar.MINUTE), DateFormat.is24HourFormat(this.activity)).show()
-            }else {
-                val fragreplace : FragmentTransaction = fragmentManager!!.beginTransaction()
-                fragreplace.replace(R.
-                    id.frag,Fragfast()).commit()
-                val botnav: BottomNavigationView = activity!!.findViewById(R.id.bott_nav)
-                botnav.selectedItemId= R.id.nav_fast }
+            }
         }
         Cancelbtn.setOnClickListener{
             stopService()
-            whenbtn.visibility=View.VISIBLE
-            nowbtn.visibility=View.INVISIBLE
-            Cancelbtn.visibility=View.INVISIBLE
+            seebtn.visibility=View.VISIBLE
+            tableRow4.visibility=View.INVISIBLE
             prog.progress = 100
-            whenbtn.text="See all fasts"
             timeselected=false
             startTimeInMillis=0L
             timelefttofast=0L
@@ -150,28 +148,31 @@ class  Fragtimer : Fragment() {
             }
         }
     }
-
+    @SuppressLint("RestrictedApi")
     override fun onResume() {
         super.onResume()
+        progNoticeMe(prog)
         when {
             startTimeInMillis != 0L && !timeselected && !timerRunning -> {
                 updateCountDownText(startTimeInMillis,"You selected:\n")
-                whenbtn.text = "Set your fasting time start"
-                nowbtn.visibility = View.VISIBLE
-                Cancelbtn.visibility= View.VISIBLE
+                smalltobig(nowbtn)
+                smalltobig(Cancelbtn)
+                smalltobig(whenbtn)
+                seebtn.visibility=View.INVISIBLE
                 prog.progress = 100
             }
             startTimeInMillis != 0L && timeselected && !timerRunning -> {
-                whenbtn.visibility = View.INVISIBLE
-                nowbtn.visibility = View.VISIBLE
-                Cancelbtn.visibility = View.VISIBLE
+                whenbtn.visibility=View.INVISIBLE
+                smalltobig(nowbtn)
+                smalltobig(Cancelbtn)
+                seebtn.visibility=View.INVISIBLE
             }
             startTimeInMillis != 0L && !timeselected && timerRunning -> {
-                whenbtn.visibility = View.INVISIBLE
-                nowbtn.visibility = View.INVISIBLE
-                Cancelbtn.visibility = View.VISIBLE
+                whenbtn.visibility=View.INVISIBLE
+                nowbtn.visibility=View.INVISIBLE
+                smalltobig(Cancelbtn)
+                seebtn.visibility=View.INVISIBLE
             }
-
         }
     }
 
@@ -194,8 +195,9 @@ class  Fragtimer : Fragment() {
         }
     }
 
-    @SuppressLint("CommitPrefEdits")
+    @SuppressLint("CommitPrefEdits", "RestrictedApi")
     private fun startTimer() {
+        progNoticeMe(prog)
         timeselected = false
         fastTracking(timeLeftInMillis)
         prog.visibility=View.VISIBLE
@@ -216,6 +218,7 @@ class  Fragtimer : Fragment() {
                 val value = startTimeInMillis - timeLeftInMillis
                 i = (value + 1000).toInt()
                 prog.progress = i
+                progNoticeMe(prog)
             }
 
             @SuppressLint("SetTextI18n")
@@ -303,5 +306,21 @@ class  Fragtimer : Fragment() {
         val vFastTrackService = Intent(this.activity, TimeLeftToeat::class.java)
         activity!!.stopService(vTimeLeftToFastService)
         activity!!.stopService(vFastTrackService)
+    }
+    @SuppressLint("RestrictedApi")
+    private fun smalltobig(button: FloatingActionButton){
+        val myAnim = AnimationUtils.loadAnimation(this.activity, R.anim.bouncef)
+        val interpolator = Animation(0.2, 20.0)
+        myAnim.interpolator = interpolator
+        button.startAnimation(myAnim)
+        button.visibility= View.VISIBLE
+    }
+
+    private fun progNoticeMe(button: MaterialProgressBar){
+        val myAnim = AnimationUtils.loadAnimation(this.activity, R.anim.bouncef)
+        val interpolator = Animation(0.2, 20.0)
+        myAnim.interpolator = interpolator
+        button.startAnimation(myAnim)
+        button.visibility= View.VISIBLE
     }
 }

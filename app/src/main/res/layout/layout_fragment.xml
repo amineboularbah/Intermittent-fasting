@@ -47,34 +47,15 @@
             tools:ignore="Autofill,LabelFor" />
 
         <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="KG"
-                android:textSize="18dp"
-                android:textColor="#020F59"
-                android:fontFamily="@font/acme"
-                android:layout_gravity="center"/>
-        <TextView
-        android:id="@+id/gt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" / "
-        android:textSize="24dp"
-        android:textColor="#020F59"
-        android:fontFamily="@font/acme"
-        android:layout_gravity="center"
-                android:textStyle=""/>
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme"
+            android:text="KG / LB"
+            android:textColor="#020F59"
+            android:textSize="18dp" />
 
-        <TextView
-                android:id="@+id/pounds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LB"
-                android:textSize="18dp"
-                android:textColor="#020F59"
-                android:fontFamily="@font/acme"
-                android:layout_gravity="center"/>
     </TableRow>
 
     <TableRow

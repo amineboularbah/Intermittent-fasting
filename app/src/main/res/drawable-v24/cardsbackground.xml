@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
     <corners
-            android:radius="30dp"
+            android:radius="20dp"
     />
     <solid
             android:angle="45"
             android:centerX="90%"
-            android:color="#CBD3FD"
+            android:color="#FFF"
             android:type="linear"
     />
     <padding
@@ -20,7 +20,7 @@
             android:height="30dp"
     />
     <stroke
-            android:width="2dp"
-            android:color="#E86B81FF"
+            android:color="#020F59"
+            android:width="1.5dp"
     />
 </shape>

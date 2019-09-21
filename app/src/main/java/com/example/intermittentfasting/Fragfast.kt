@@ -8,14 +8,13 @@ import androidx.fragment.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.frag_fast.*
 import androidx.lifecycle.ViewModelProviders
 import android.app.Dialog
-import android.widget.Button
-import android.widget.NumberPicker
+import android.view.animation.AnimationUtils
+import android.widget.*
 import java.util.concurrent.TimeUnit
 class Fragfast : Fragment() {
     private var viewModel: SharedViewModel? = null
@@ -29,6 +28,7 @@ class Fragfast : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         twelvehours.setOnClickListener{
+            animation(twelvehours)
             if(message == "0"){
                 message = 60000.toString() //4.32e+7 = 43200000L = 12 hours.
                 viewModel!!.setText(message)
@@ -40,6 +40,7 @@ class Fragfast : Fragment() {
             }
         }
         sixteenhours.setOnClickListener{
+            animation(sixteenhours)
             if(message == "0"){
             message = 57600000L.toString() //5.76e+7 = 57600000L = 16 hours.
             viewModel!!.setText(message)
@@ -51,6 +52,7 @@ class Fragfast : Fragment() {
         }
         }
         twentyhours.setOnClickListener{
+            animation(twentyhours)
             if(message == "0"){
                 message = 72000000L.toString() //7.2e+7 = 72000000L = 20 hours.
                 viewModel!!.setText(message)
@@ -63,6 +65,7 @@ class Fragfast : Fragment() {
 
         }
         twentyfourhours.setOnClickListener{
+            animation(twentyfourhours)
 
             if(message == "0"){
                 message = 86400000L.toString() //8.64e+7 = 86400000L = 24 hours.
@@ -75,6 +78,7 @@ class Fragfast : Fragment() {
             }
         }
         selecthours.setOnClickListener{
+            animation(selecthours)
             if(message == "0"){
                 showHoursPicker()
             }else{
@@ -127,6 +131,12 @@ class Fragfast : Fragment() {
         val editor = sharedPreferences.edit()
         editor.putLong("Fasthours",message.toLong())
         editor.apply()
+    }
+    private fun animation(button: TextView){
+        val myAnim = AnimationUtils.loadAnimation(this.activity, R.anim.bouncef)
+        val interpolator = Animation(0.2, 20.0)
+        myAnim.interpolator = interpolator
+        button.startAnimation(myAnim)
     }
 
 }

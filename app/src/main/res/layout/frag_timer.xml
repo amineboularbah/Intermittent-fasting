@@ -25,81 +25,82 @@
             app:layout_constraintStart_toStartOf="@+id/prog"
             app:layout_constraintTop_toTopOf="@+id/prog" />
 
-    <Button
-            android:id="@+id/nowbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/buttonback"
-            android:fontFamily="@font/acme"
-            android:text="Start now ! "
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="18dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/Cancelbtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="6dp"/>
-
-    <Button
-            android:id="@+id/whenbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/buttonback"
-            android:fontFamily="@font/acme"
-            android:gravity="center"
-            android:text="See all fasts"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="18dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/nowbtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="6dp"/>
-
-    <Button
-            android:id="@+id/Cancelbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="52dp"
-            android:background="@drawable/buttonback"
-            android:fontFamily="@font/acme"
-            android:text="Cancel fast !"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:textSize="18dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="6dp"/>
-
     <me.zhanghai.android.materialprogressbar.MaterialProgressBar
-            android:id="@+id/prog"
-            style="@style/Widget.MaterialProgressBar.ProgressBar"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:max="100"
-            android:minWidth="350dp"
-            android:minHeight="350dp"
-            app:layout_constraintBottom_toTopOf="@+id/whenbtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.949"
-            android:visibility="visible"/>
+        android:id="@+id/prog"
+        style="@style/Widget.MaterialProgressBar.ProgressBar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:minWidth="350dp"
+        android:minHeight="350dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seebtn"
+        app:layout_constraintVertical_bias="0.982">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/whenbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonback"
+            android:foreground="@drawable/ic_alarm_add_black_24dp"
+            android:foregroundGravity="center"
+            android:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/nowbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonback"
+            android:foreground="@drawable/ic_play_arrow_black_24dp"
+            android:foregroundGravity="center"
+            android:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Cancelbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonback"
+            android:foreground="@drawable/ic_timer_off_black_24dp"
+            android:foregroundGravity="center"
+            android:visibility="invisible" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/seebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttonback"
+        android:fontFamily="@font/acme"
+        android:padding="10dp"
+        android:text="EXPLORE All CATEGORIES"
+        android:textColor="#FFF"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prog" />
 </androidx.constraintlayout.widget.ConstraintLayout>
