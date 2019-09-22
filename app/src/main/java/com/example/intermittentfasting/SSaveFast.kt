@@ -25,16 +25,10 @@ class SSaveFast : AppCompatActivity() {
     private var fasthours:Long = 0L
     private var comment:String = "No comment"
     private var img:Int ?= null
-    private lateinit var mInterstitialAd: InterstitialAd
-
     @SuppressLint("ResourceAsColor", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ssave_fast)
-        MobileAds.initialize(this,"ca-app-pub-3940256099942544~3347511713")
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
 
         //loading data also getting fast category from shared pref.
         loadData()
@@ -77,9 +71,6 @@ class SSaveFast : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 Toast.makeText( this,"Fast saved !", Toast.LENGTH_SHORT).show()
-                if (mInterstitialAd.isLoaded) {
-                    mInterstitialAd.show()
-                }
             }
             val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.cancelAll()
@@ -91,9 +82,6 @@ class SSaveFast : AppCompatActivity() {
             confirming.setPositiveButton("DISCARD"){ _: DialogInterface, _: Int ->
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                if (mInterstitialAd.isLoaded) {
-                    mInterstitialAd.show()
-                }
             }
             confirming.setNegativeButton("No"){_: DialogInterface, _: Int ->
                 Toast.makeText(this,"Fast not discarded !",Toast.LENGTH_SHORT).show()

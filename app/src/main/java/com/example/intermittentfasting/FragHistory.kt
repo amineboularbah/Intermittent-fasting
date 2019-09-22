@@ -31,6 +31,7 @@ class FragHistory : Fragment() {
             loadData()
             fastlist.reverse()
             buildRecyclerView()
+
     }
 
     private fun loadData() {

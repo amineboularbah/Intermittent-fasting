@@ -26,7 +26,7 @@ class HistoryViewAdapter(private val mFastList: ArrayList<FastEx>) :
          var vTextView1: TextView = itemView.findViewById(R.id.fastcat)
          var vTextView2: TextView = itemView.findViewById(R.id.commenttxt)
          var vDate: TextView = itemView.findViewById(R.id.datetxt)
-         private var vDeleteImage: TableRow = itemView.findViewById(R.id.Delete)
+         private var vDeleteImage: TableRow = itemView.findViewById(R.id.DeleteFast)
 
         init {
             vDeleteImage.setOnClickListener {

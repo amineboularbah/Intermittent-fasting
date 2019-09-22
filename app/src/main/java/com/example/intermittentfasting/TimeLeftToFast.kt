@@ -70,7 +70,7 @@ class TimeLeftToFast : Service() {
                     .setContentIntent(pedint)
                     .setAutoCancel(true)
                     .build()
-                notificationManager!!.notify(143, notification)
+                notificationManager!!.notify(21, notification)
             }
         }.start()
 
