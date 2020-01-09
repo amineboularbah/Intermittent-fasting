@@ -20,7 +20,6 @@ import android.content.Context.MODE_PRIVATE
 import android.text.format.DateFormat
 import android.content.Intent
 import android.view.animation.AnimationUtils
-import android.widget.Button
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar

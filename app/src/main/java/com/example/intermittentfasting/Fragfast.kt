@@ -105,10 +105,9 @@ class Fragfast : Fragment() {
         np.wrapSelectorWheel = false
         np.setOnValueChangedListener { _, _, newVal ->
             //Display the newly selected number to text view
-            selecthours.text = "Selected Hours : $newVal"
+
         }
         b1.setOnClickListener {
-                selecthours.text = "Selected Hours : ${np.value}"
                 message = TimeUnit.HOURS.toMillis(np.value.toLong()).toString()
                 viewModel!!.setText(message)
                 transFragTimer()
@@ -132,7 +131,7 @@ class Fragfast : Fragment() {
         editor.putLong("Fasthours",message.toLong())
         editor.apply()
     }
-    private fun animation(button: TextView){
+    private fun animation(button: LinearLayout){
         val myAnim = AnimationUtils.loadAnimation(this.activity, R.anim.bouncef)
         val interpolator = Animation(0.2, 20.0)
         myAnim.interpolator = interpolator

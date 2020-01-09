@@ -11,12 +11,13 @@
             android:layout_height="182dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:solidColor="#020F59"
+            android:solidColor="#00020F59"
             android:theme="@style/pickerTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+        android:background="@drawable/card4"/>
 
     <TableRow
             android:layout_width="match_parent"
@@ -30,25 +31,26 @@
 
         <Button
                 android:id="@+id/setbtn"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/numberPicker1"
                 android:layout_alignBaseline="@+id/cnclbrn"
                 android:layout_alignBottom="@+id/cnclbrn"
                 android:layout_toLeftOf="@+id/numberPicker1"
-                android:background="@drawable/buttonback"
+                android:background="@drawable/card4"
                 android:fontFamily="@font/acme"
                 android:text="Set"
                 android:textColor="#FFF"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+            android:layout_marginRight="20dp"/>
 
         <Button
                 android:id="@+id/cnclbrn"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/numberPicker1"
                 android:layout_toRightOf="@+id/numberPicker1"
-                android:background="@drawable/buttonback"
+                android:background="@drawable/card4"
                 android:fontFamily="@font/acme"
                 android:text="Cancel"
                 android:textColor="#FFF"

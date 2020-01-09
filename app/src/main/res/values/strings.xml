@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Intermittent Fasting</string>
+    <string name="hour24">During a fast of 24 or more hours, glycogen - the storage form of carbs - is depleted and insulin levels are reduced. This allows your body to burn mostly fat for energy, making stored body fat more available for use</string>
+    <string name="hours12">According to some researchers, fasting for 10–16 hours can cause the body to turn its fat stores into energy, which releases ketones into the bloodstream. This should encourage weight loss. This type of intermittent fasting plan may be a good option for beginners.</string>
+    <string name="hours16">People who follow this eating plan will fast for 16 hours a day and consume all of their calories during the remaining 8 hours. Suggested benefits of the 16:8 plan include weight loss and fat loss, as well as the prevention of type 2 diabetes and other obesity-associated conditions</string>
+    <string name="hours24">During a fast of 24 or more hours, glycogen — the storage form of carbs — is depleted and insulin levels are reduced. This allows your body to burn mostly fat for energy, making stored body fat more available for use</string>
+    <string name="hours20">It May Aid Weight Loss\n
+One study, which closely mimicked the Warrior Diet (fasting for 20 hours), found that people who consumed meals over four hours in the evening experienced more weight loss than those who consumed the same amount of calories in meals throughout the day.</string>
 </resources>

@@ -10,7 +10,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <style name="pickerTheme" parent="Theme.AppCompat.Light.NoActionBar" >
-        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:dialogCornerRadius" tools:targetApi="p">10dp</item>
         <item name="android:fontFamily">@font/acme</item>
 

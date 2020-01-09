@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center|top">
+    android:layout_gravity="center|top"
+    android:background="@drawable/card4">
 
 
     <LinearLayout
@@ -15,24 +16,25 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/cardsbackground"
+        android:background="@drawable/card4"
         >
+
 
         <TextView
             android:id="@+id/weightdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/dateback"
             android:fontFamily="@font/acme"
-            android:gravity="center"
+            android:gravity="left"
             android:padding="10dp"
             android:textColor="#FFF"
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"/>
 
         <TableRow
             android:minWidth="410dp"
@@ -42,19 +44,21 @@
             android:gravity="center"
             android:paddingTop="10dp">
 
+
             <TextView
                 android:id="@+id/savedWeight"
-                android:minWidth="410dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/acme"
-                android:gravity="center"
+                android:gravity="left"
+                android:minWidth="410dp"
                 android:text="FastHours"
-                android:textColor="#020F59"
-                android:textSize="24dp" />
-        </TableRow>
+                android:textColor="#FFF"
+                android:textSize="24dp"
+                android:textAlignment="center"/>
 
+        </TableRow>
         <TableRow
             android:id="@+id/Delete"
             android:minWidth="410dp"
@@ -83,6 +87,5 @@
                 android:textSize="20dp" />
 
         </TableRow>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,118 +4,302 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#CBD3FD"
+        android:background="#EFF3FC"
         android:layout_height="match_parent">
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
-        android:foregroundGravity="center"
+    <ScrollView
+        android:id="@+id/recycl"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="4dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyid"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="10dp"
             android:scrollbarSize="0dp"
             android:scrollbars="none"
             android:verticalScrollbarPosition="defaultPosition">
 
-            <TextView
+            <LinearLayout
                 android:id="@+id/twelvehours"
-                android:layout_width="180dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:background="@drawable/buttonback"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Fast for 12 hours \n 12/12"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:layout_width="370dp"
+                android:layout_height="220dp"
+                android:layout_margin="10px"
+                android:layout_weight="1"
+                android:background="@drawable/card4"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cardsbackground"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="FAST FOR\n12 HOURS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginRight="20px"
+                        android:fontFamily="@font/acme"
+                        android:padding="1px"
+                        android:text="@string/hours12"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/food12" />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/sixteenhours"
-                android:layout_width="180dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
+                android:layout_width="370dp"
+                android:layout_height="220dp"
+                android:layout_margin="10px"
                 android:layout_weight="1"
-                android:background="@drawable/buttonback"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Fast for 16 hours \n 16/8"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:background="@drawable/card4"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cardsbackground"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="FAST FOR\n16 HOURS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginRight="20px"
+                        android:fontFamily="@font/acme"
+                        android:padding="1px"
+                        android:text="@string/hours16"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/goodfood" />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/twentyhours"
-                android:layout_width="180dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
+                android:layout_width="370dp"
+                android:layout_height="220dp"
+                android:layout_margin="10px"
                 android:layout_weight="1"
-                android:background="@drawable/buttonback"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Fast for 20 hours \n 20/4"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:background="@drawable/card4"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cardsbackground"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="FAST FOR\n20 HOURS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginRight="20px"
+                        android:fontFamily="@font/acme"
+                        android:padding="1px"
+                        android:text="@string/hours20"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/frui" />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/twentyfourhours"
-                android:layout_width="180dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
+                android:layout_width="370dp"
+                android:layout_height="220dp"
+                android:layout_margin="10px"
                 android:layout_weight="1"
-                android:background="@drawable/buttonback"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Fast for 24 hours \n 24/0"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:background="@drawable/card4"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cardsbackground"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="FAST FOR\n24 HOURS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginRight="20px"
+                        android:fontFamily="@font/acme"
+                        android:padding="1px"
+                        android:text="@string/hours24"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/gla" />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/selecthours"
-                android:layout_width="180dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="50dp"
+                android:layout_width="370dp"
+                android:layout_height="220dp"
+                android:layout_margin="10px"
                 android:layout_weight="1"
-                android:background="@drawable/buttonback"
-                android:fontFamily="@font/acme"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Select how many \nhours to fast"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:background="@drawable/card4"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cardsbackground"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center"
+                    android:padding="10px"
+                    android:text="Custom fasting\n category"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="30px"
+                        android:layout_marginRight="20px"
+                        android:fontFamily="@font/acme"
+                        android:padding="1px"
+                        android:text="Create your custom fast category"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cof" />
+                </TableRow>
+            </LinearLayout>
         </LinearLayout>
-    </HorizontalScrollView>
+    </ScrollView>
 
     <TableRow
-        android:layout_width="0dp"
+        android:layout_width="400dp"
         android:layout_height="180dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/buttonback"
+        android:layout_marginTop="50px"
+        android:background="@drawable/card4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="10px">
 
         <TextView
             android:id="@+id/DateView"
@@ -130,9 +314,9 @@
 
         <View
             android:id="@+id/view2"
-            android:layout_width="wrap_content"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_restaurant_menu_black_24dp" />
+            android:background="@drawable/food1" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

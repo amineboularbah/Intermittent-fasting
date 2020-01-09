@@ -4,7 +4,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+    >
 
     <TableRow
             android:id="@+id/tableRow2"
@@ -32,7 +34,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/acme"
                 android:text="Weight"
-                android:textColor="#020F59"
+                android:textColor="#000"
                 android:textSize="18sp"
                 android:gravity="center"
             tools:ignore="HardcodedText" />
@@ -44,7 +46,8 @@
                 android:layout_gravity="center"
                 android:ems="10"
                 android:inputType="numberDecimal"
-            tools:ignore="Autofill,LabelFor" />
+            tools:ignore="Autofill,LabelFor"
+            android:textColor="#000"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -53,7 +56,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/acme"
             android:text="KG / LB"
-            android:textColor="#020F59"
+            android:textColor="#000"
             android:textSize="18dp" />
 
     </TableRow>
@@ -80,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textSize="18dp"
-                android:textColor="#020F59"
+                android:textColor="#000"
                 android:fontFamily="@font/acme"
                 android:layout_gravity="center"
                 android:gravity="center"/>
@@ -92,6 +95,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:layout_gravity="center"
+            android:textColor="#000"
                 />
     </TableRow>
 
@@ -103,10 +107,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#020F59"
             android:text="Adding Weight . . ."
             android:gravity="center"
-            android:textColor="#FFF"
+            android:textColor="#202189"
             android:textSize="30dp"
             android:fontFamily="@font/acme"/>
 

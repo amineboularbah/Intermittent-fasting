@@ -23,7 +23,7 @@
         android:id="@+id/adweight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonback"
+        android:background="@drawable/btnback"
         android:fontFamily="@font/acme"
         android:text="ADD WEIGHT"
         android:textColor="#FFF"
