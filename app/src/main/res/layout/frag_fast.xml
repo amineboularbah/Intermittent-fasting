@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#EFF3FC"
+        android:background="@drawable/aez"
         android:layout_height="match_parent">
 
     <ScrollView
@@ -18,7 +18,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/historyid"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UnknownIdInLayout">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -33,10 +34,11 @@
                 android:id="@+id/twelvehours"
                 android:layout_width="370dp"
                 android:layout_height="220dp"
-                android:layout_margin="10px"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/card4"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <TextView
                     android:id="@+id/textView8"
@@ -44,13 +46,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/cardsbackground"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/heebo_bold"
                     android:gravity="center"
-                    android:padding="10px"
-                    android:text="FAST FOR\n12 HOURS"
+                    android:padding="10dp"
+                    android:text="@string/hours12Title"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow
@@ -60,21 +62,20 @@
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginRight="20px"
-                        android:fontFamily="@font/acme"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/heebo_bold"
                         android:padding="1px"
                         android:text="@string/hours12"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/food12" />
+                        app:srcCompat="@drawable/food12"
+                        />
 
                 </TableRow>
 
@@ -85,7 +86,7 @@
                 android:id="@+id/sixteenhours"
                 android:layout_width="370dp"
                 android:layout_height="220dp"
-                android:layout_margin="10px"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/card4"
                 android:orientation="vertical">
@@ -96,13 +97,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/cardsbackground"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/heebo_bold"
                     android:gravity="center"
-                    android:padding="10px"
-                    android:text="FAST FOR\n16 HOURS"
+                    android:padding="10dp"
+                    android:text="@string/hours16Title"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow
@@ -112,15 +113,13 @@
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginRight="20px"
-                        android:fontFamily="@font/acme"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/heebo_bold"
                         android:padding="1px"
                         android:text="@string/hours16"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -137,7 +136,7 @@
                 android:id="@+id/twentyhours"
                 android:layout_width="370dp"
                 android:layout_height="220dp"
-                android:layout_margin="10px"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/card4"
                 android:orientation="vertical">
@@ -148,13 +147,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/cardsbackground"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/heebo_bold"
                     android:gravity="center"
-                    android:padding="10px"
-                    android:text="FAST FOR\n20 HOURS"
+                    android:padding="10dp"
+                    android:text="@string/hours20title"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow
@@ -164,15 +163,13 @@
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginRight="20px"
-                        android:fontFamily="@font/acme"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/heebo_bold"
                         android:padding="1px"
                         android:text="@string/hours20"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -189,7 +186,7 @@
                 android:id="@+id/twentyfourhours"
                 android:layout_width="370dp"
                 android:layout_height="220dp"
-                android:layout_margin="10px"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/card4"
                 android:orientation="vertical">
@@ -200,13 +197,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/cardsbackground"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/heebo_bold"
                     android:gravity="center"
-                    android:padding="10px"
-                    android:text="FAST FOR\n24 HOURS"
+                    android:padding="10dp"
+                    android:text="@string/hours24title"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow
@@ -216,15 +213,13 @@
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginRight="20px"
-                        android:fontFamily="@font/acme"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/heebo_bold"
                         android:padding="1px"
                         android:text="@string/hours24"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:id="@+id/imageView0"
@@ -241,7 +236,7 @@
                 android:id="@+id/selecthours"
                 android:layout_width="370dp"
                 android:layout_height="220dp"
-                android:layout_margin="10px"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/card4"
                 android:orientation="vertical">
@@ -252,13 +247,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/cardsbackground"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/heebo_bold"
                     android:gravity="center"
-                    android:padding="10px"
-                    android:text="Custom fasting\n category"
+                    android:padding="10dp"
+                    android:text="@string/custonFast"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow
@@ -268,16 +263,14 @@
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10px"
-                        android:layout_marginTop="30px"
-                        android:layout_marginRight="20px"
-                        android:fontFamily="@font/acme"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/heebo_bold"
                         android:padding="1px"
-                        android:text="Create your custom fast category"
+                        android:text="@string/create_custom_fast"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -306,11 +299,11 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/acme"
-            android:text="What fasting category would you like to try ?\n \n Select the suitable category for you and read more info about it."
+            android:fontFamily="@font/heebo_bold"
+            android:text="What fasting category would you like to try ?\n\n  Select the suitable category for you and read more info about it."
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <View
             android:id="@+id/view2"

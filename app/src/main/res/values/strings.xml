@@ -6,4 +6,10 @@
     <string name="hours24">During a fast of 24 or more hours, glycogen — the storage form of carbs — is depleted and insulin levels are reduced. This allows your body to burn mostly fat for energy, making stored body fat more available for use</string>
     <string name="hours20">It May Aid Weight Loss\n
 One study, which closely mimicked the Warrior Diet (fasting for 20 hours), found that people who consumed meals over four hours in the evening experienced more weight loss than those who consumed the same amount of calories in meals throughout the day.</string>
+    <string name="hours12Title">FAST FOR 12 HOURS</string>
+    <string name="hours16Title">FAST FOR 16 HOURS</string>
+    <string name="hours20title">FAST FOR 20 HOURS</string>
+    <string name="hours24title">FAST FOR 24 HOURS</string>
+    <string name="custonFast">Custom fasting  category</string>
+    <string name="create_custom_fast">Create your custom fast category</string>
 </resources>

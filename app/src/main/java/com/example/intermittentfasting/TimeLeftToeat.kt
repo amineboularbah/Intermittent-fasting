@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit
 import androidx.core.app.NotificationManagerCompat
 import com.example.intermittentfasting.App.Companion.faststatuschannel
 import com.example.intermittentfasting.App.Companion.timetrackingchannel
+import android.content.ContentResolver
+import android.net.Uri
 
 
 @Suppress("UNREACHABLE_CODE", "RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS",

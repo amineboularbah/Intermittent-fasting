@@ -5,7 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center|top">
+    android:layout_gravity="center|top"
+    android:layout_marginBottom="10dp"
+    >
 
 
     <LinearLayout
@@ -14,7 +16,7 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/cardsbackground"
+        android:background="@drawable/selected"
         >
 
         <TextView
@@ -22,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/dateback"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/heebo_bold"
             android:gravity="center"
             android:padding="10dp"
             android:textColor="#FFF"
@@ -33,44 +34,53 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="10dp"
-            android:gravity="center">
+            android:layout_height="match_parent" >
+
 
             <ImageView
                 android:id="@+id/feelimg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/angry" />
+                app:srcCompat="@drawable/angry"
+                android:layout_marginStart="20dp"
+                />
 
-            <TextView
-                android:id="@+id/fastcat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/acme"
-                android:gravity="center"
-                android:text="FastHours"
-                android:textColor="#020F59"
-                android:textSize="24dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fastcat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo_bold"
+                    android:paddingStart="20dp"
+                    android:text="FastHours"
+                    android:textColor="#FFF"
+                    android:textSize="24dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/commenttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/heebo_bold"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="10dp"
+                    android:text="Comment"
+                    android:textColor="#FFF"
+                    android:textSize="14dp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+
         </TableRow>
-
-        <TextView
-            android:id="@+id/commenttxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/acme"
-            android:gravity="center"
-            android:text="Comment"
-            android:textColor="#020F59"
-            android:textSize="14dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
 
         <TableRow
             android:id="@+id/DeleteFast"
@@ -78,13 +88,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            >
 
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/ic_close_black_24dp"
                 tools:ignore="VectorDrawableCompat" />
 
@@ -92,11 +103,11 @@
                 android:id="@+id/Delbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:text="Delete"
                 android:textAllCaps="false"
                 android:textColor="#FF0000"
-                android:textSize="20dp" />
+                android:textSize="30dp" />
 
         </TableRow>
 

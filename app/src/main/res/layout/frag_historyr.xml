@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EFF3FC"
+        android:background="@drawable/aez"
         tools:context="com.example.intermittentfasting.MainActivity"
         >
 
@@ -27,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/acme"
-        android:text="HISTORY"
+        android:fontFamily="@font/heebo_bold"
+        android:text="H i s t o r y"
         android:textColor="#020F59"
         android:textSize="36dp"
         android:textStyle="bold"

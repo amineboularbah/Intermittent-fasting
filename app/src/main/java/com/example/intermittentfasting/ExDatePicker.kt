@@ -11,7 +11,6 @@ import java.text.DateFormat
 import java.util.*
 
 class ExDatePicker : DialogFragment(), DatePickerDialog.OnDateSetListener {
-    private var weightList:ArrayList<FastEx> = ArrayList()
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         val c = Calendar.getInstance()
         c.set(Calendar.YEAR, year)

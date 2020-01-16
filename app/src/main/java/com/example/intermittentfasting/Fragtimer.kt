@@ -20,6 +20,7 @@ import android.content.Context.MODE_PRIVATE
 import android.text.format.DateFormat
 import android.content.Intent
 import android.view.animation.AnimationUtils
+import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar
@@ -58,6 +59,7 @@ class  Fragtimer : Fragment() {
         nowbtn.setOnClickListener{
             whenbtn.visibility=View.INVISIBLE
             nowbtn.visibility=View.INVISIBLE
+
             smalltobig(Cancelbtn)
             if(startTimeInMillis != 0L){
                 timeLeftInMillis=startTimeInMillis
@@ -150,8 +152,9 @@ class  Fragtimer : Fragment() {
     @SuppressLint("RestrictedApi")
     override fun onResume() {
         super.onResume()
-        progNoticeMe(prog)
+        progNoticeMe(prog )
         when {
+
             startTimeInMillis != 0L && !timeselected && !timerRunning -> {
                 updateCountDownText(startTimeInMillis,"You selected:\n")
                 smalltobig(nowbtn)
@@ -196,7 +199,8 @@ class  Fragtimer : Fragment() {
 
     @SuppressLint("CommitPrefEdits", "RestrictedApi")
     private fun startTimer() {
-        progNoticeMe(prog)
+        prog.visibility=View.VISIBLE
+        progNoticeMe(prog )
         timeselected = false
         fastTracking(timeLeftInMillis)
         prog.visibility=View.VISIBLE
@@ -217,7 +221,7 @@ class  Fragtimer : Fragment() {
                 val value = startTimeInMillis - timeLeftInMillis
                 i = (value + 1000).toInt()
                 prog.progress = i
-                progNoticeMe(prog)
+                progNoticeMe(prog )
             }
 
             @SuppressLint("SetTextI18n")
@@ -315,7 +319,7 @@ class  Fragtimer : Fragment() {
         button.visibility= View.VISIBLE
     }
 
-    private fun progNoticeMe(button: MaterialProgressBar){
+    private fun progNoticeMe(button: ProgressBar){
         val myAnim = AnimationUtils.loadAnimation(this.activity, R.anim.bouncef)
         val interpolator = Animation(0.2, 20.0)
         myAnim.interpolator = interpolator

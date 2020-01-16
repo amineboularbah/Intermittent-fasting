@@ -3,9 +3,9 @@
     This code creates an animation that changes the size of a view from 30% to 100% during two seconds.
     <scale
         android:duration="1000"
-        android:fromXScale="0.97"
+        android:fromXScale="0.985"
         android:toXScale="1.0"
-        android:fromYScale="0.97"
+        android:fromYScale="0.985"
         android:toYScale="1.0"
         android:pivotX="50%"
         android:pivotY="50%" />

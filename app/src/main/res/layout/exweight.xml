@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center|top"
-    android:background="@drawable/card4">
+    android:background="@drawable/selected"
+    android:layout_marginBottom="20dp">
 
 
     <LinearLayout
@@ -16,25 +17,36 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/card4"
+        android:background="@drawable/selected"
         >
-
-
-        <TextView
-            android:id="@+id/weightdate"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_gravity="center"
-            android:fontFamily="@font/acme"
-            android:gravity="left"
-            android:padding="10dp"
-            android:textColor="#FFF"
-            android:textSize="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textAlignment="center"/>
+            android:gravity="center"
+            android:paddingStart="90dp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/calender" />
+
+            <TextView
+                android:id="@+id/weightdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo_bold"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColor="#FFF"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
 
         <TableRow
             android:minWidth="410dp"
@@ -42,21 +54,28 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:paddingStart="90dp">
 
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@drawable/wiehgt" />
 
             <TextView
                 android:id="@+id/savedWeight"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:gravity="left"
                 android:minWidth="410dp"
                 android:text="FastHours"
                 android:textColor="#FFF"
                 android:textSize="24dp"
-                android:textAlignment="center"/>
+                />
 
         </TableRow>
         <TableRow
@@ -80,7 +99,7 @@
                 android:id="@+id/Delbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:text="Delete"
                 android:textAllCaps="false"
                 android:textColor="#FF0000"

@@ -5,7 +5,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+    android:background="@drawable/background"
     >
 
     <TableRow
@@ -24,7 +24,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/weight"
+                android:background="@drawable/wiehgt"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -32,9 +32,9 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:text="Weight"
-                android:textColor="#000"
+                android:textColor="#FFF"
                 android:textSize="18sp"
                 android:gravity="center"
             tools:ignore="HardcodedText" />
@@ -47,16 +47,16 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
             tools:ignore="Autofill,LabelFor"
-            android:textColor="#000"/>
+            android:textColor="#FFF"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/heebo_bold"
             android:text="KG / LB"
-            android:textColor="#000"
+            android:textColor="#FFF"
             android:textSize="18dp" />
 
     </TableRow>
@@ -69,12 +69,12 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow2"
-            android:gravity="left">
+            android:gravity="start">
         <ImageView
                 android:id="@+id/img"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/ic_date_range"
+                android:background="@drawable/calender"
                 />
 
         <TextView
@@ -82,9 +82,9 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="Date"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:fontFamily="@font/acme"
+                android:textSize="18sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/heebo_bold"
                 android:layout_gravity="center"
                 android:gravity="center"/>
 
@@ -95,8 +95,8 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:layout_gravity="center"
-            android:textColor="#000"
-                />
+            android:textColor="#FFF"
+            tools:ignore="TextViewEdits" />
     </TableRow>
 
 
@@ -109,8 +109,8 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Adding Weight . . ."
             android:gravity="center"
-            android:textColor="#202189"
-            android:textSize="30dp"
-            android:fontFamily="@font/acme"/>
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:fontFamily="@font/heebo_bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

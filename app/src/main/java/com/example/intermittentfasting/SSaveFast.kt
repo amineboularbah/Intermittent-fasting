@@ -18,6 +18,9 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 import android.app.NotificationManager
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.ImageView
 
 
 class SSaveFast : AppCompatActivity() {
@@ -43,20 +46,24 @@ class SSaveFast : AppCompatActivity() {
             goodtxt.setBackgroundColor(0)
             angrytxt.setBackgroundColor(0)
             img = R.drawable.sad
+            animation(badimg)
         }
         angryimg.setOnClickListener{
             angrytxt.setBackgroundResource(R.drawable.selected)
             goodtxt.setBackgroundColor(0)
             badtxt.setBackgroundColor(0)
             img = R.drawable.angry
+            animation(angryimg)
         }
         goodimg.setOnClickListener{
             goodtxt.setBackgroundResource(R.drawable.selected)
             angrytxt.setBackgroundColor(0)
             badtxt.setBackgroundColor(0)
             img = R.drawable.good
+            animation(goodimg)
         }
         savebtn.setOnClickListener{
+            btnAnimation(savebtn)
             comment = if(comtxt.text!!.isEmpty()){
                 "No comment"
             }else {
@@ -76,6 +83,7 @@ class SSaveFast : AppCompatActivity() {
             notificationManager.cancelAll()
         }
         discardbtn.setOnClickListener {
+            btnAnimation(discardbtn)
             val confirming = AlertDialog.Builder(this)
             confirming.setTitle("Discard fast")
             confirming.setMessage("Are you sure ?")
@@ -111,5 +119,17 @@ class SSaveFast : AppCompatActivity() {
         }
     }
     override fun onBackPressed() {
+    }
+    private fun animation(button: ImageView){
+        val myAnim = AnimationUtils.loadAnimation(this, R.anim.bouncef)
+        val interpolator = Animation(0.2, 20.0)
+        myAnim.interpolator = interpolator
+        button.startAnimation(myAnim)
+    }
+    private fun btnAnimation(button: Button){
+        val myAnim = AnimationUtils.loadAnimation(this, R.anim.bouncef)
+        val interpolator = Animation(0.2, 20.0)
+        myAnim.interpolator = interpolator
+        button.startAnimation(myAnim)
     }
 }

@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#020F59</item>
-        <item name="colorPrimaryDark">#000A5F</item>
-        <item name="colorAccent">#020F59</item>
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#41C0F2</item>
+        <item name="colorAccent">#8435F2</item>
     </style>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

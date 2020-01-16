@@ -4,30 +4,30 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CBD3FD"
+        android:background="@drawable/background"
         tools:context=".SSaveFast">
 
     <View
         android:id="@+id/view3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonback"
+        android:layout_height="600dp"
+        android:background="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/vFastCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/heebo_bold"
             android:gravity="center"
             android:text="Fast category is: \n"
             android:textColor="#FFF"
-            android:textSize="18dp"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="@+id/view3"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/view3"
@@ -38,11 +38,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/acme"
+        android:fontFamily="@font/heebo_bold"
         android:gravity="center"
         android:text="How do you feel ?"
         android:textColor="#FFF"
-        android:textSize="16dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/view3"
@@ -59,24 +59,25 @@
 
         <ImageView
             android:id="@+id/angryimg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            app:srcCompat="@drawable/angry" />
+            app:srcCompat="@drawable/angry"
+            />
 
         <ImageView
             android:id="@+id/badimg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             app:srcCompat="@drawable/sad" />
 
         <ImageView
             android:id="@+id/goodimg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             app:srcCompat="@drawable/good" />
@@ -87,11 +88,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/acme"
+        android:fontFamily="@font/heebo_bold"
         android:gravity="center"
         android:text="Do you want to add any comment ?"
         android:textColor="#FFF"
-        android:textSize="16dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +100,7 @@
 
     <EditText
             android:id="@+id/comtxt"
-            android:layout_width="wrap_content"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:textColorHint="#B5FFFFFF"
@@ -109,12 +110,14 @@
             app:layout_constraintStart_toStartOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             android:gravity="center"
-            android:fontFamily="@font/acme"
-            android:backgroundTint="#FFF"
+            android:fontFamily="@font/heebo_bold"
+        android:padding="10dp"
             android:maxLength="150"
             android:textColor="#FFF"
             android:inputType="textMultiLine"
-            android:maxLines="4">
+            android:maxLines="4"
+        android:background="@drawable/selected"
+        android:textSize="18sp">
 
     </EditText>
 
@@ -131,22 +134,22 @@
 
         <TextView
             android:id="@+id/angrytxt"
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/acme"
-            android:text="ANGRY"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/heebo_bold"
+            android:text="Angry"
             android:textColor="#FFF"
             android:textSize="22dp"
             android:gravity="center"/>
 
         <TextView
             android:id="@+id/badtxt"
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:fontFamily="@font/acme"
-            android:text="BAD"
+            android:fontFamily="@font/heebo_bold"
+            android:text="Bad"
             android:textColor="#FFF"
             android:textSize="22dp"
             android:gravity="center"
@@ -154,11 +157,11 @@
 
         <TextView
             android:id="@+id/goodtxt"
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/acme"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/heebo_bold"
             android:gravity="center"
-            android:text="GOOD"
+            android:text="Good"
             android:textColor="#FFF"
             android:textSize="22dp" />
     </TableRow>
@@ -182,10 +185,10 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@drawable/selected"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/heebo_bold"
             android:gravity="center"
             android:text="DISCARD"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textColor="#FFF"/>
 
         <Button
@@ -195,10 +198,10 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@drawable/selected"
-            android:fontFamily="@font/acme"
+            android:fontFamily="@font/heebo_bold"
             android:gravity="center"
             android:text="Save"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textColor="#FFF"/>
     </TableRow>
 

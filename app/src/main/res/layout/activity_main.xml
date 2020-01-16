@@ -23,6 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#C3979DFF"
+        android:background="@drawable/background"
         app:menu="@menu/bott_nav" />
 </RelativeLayout>

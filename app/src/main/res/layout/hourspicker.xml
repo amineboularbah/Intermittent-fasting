@@ -38,7 +38,7 @@
                 android:layout_alignBottom="@+id/cnclbrn"
                 android:layout_toLeftOf="@+id/numberPicker1"
                 android:background="@drawable/card4"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:text="Set"
                 android:textColor="#FFF"
                 android:textSize="18dp"
@@ -51,7 +51,7 @@
                 android:layout_below="@+id/numberPicker1"
                 android:layout_toRightOf="@+id/numberPicker1"
                 android:background="@drawable/card4"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/heebo_bold"
                 android:text="Cancel"
                 android:textColor="#FFF"
                 android:textSize="18dp" />
